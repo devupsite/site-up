@@ -3,7 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UP Agência — Marketing Digital que Domina Atenção</title>
+  <title>UP Agência — Marketing Digital de Performance</title>
+  <meta name="description" content="A UP Agência transforma investimento em mídia em resultado real. Marketing digital de performance para clínicas, varejo, e-commerce e muito mais." />
+  <meta name="keywords" content="marketing digital, performance, Google Ads, Meta Ads, SEO, agência digital, resultados" />
+  <meta name="author" content="UP Agência" />
+
+  <!-- Open Graph (WhatsApp, LinkedIn, Facebook) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="UP Agência — Marketing Digital de Performance" />
+  <meta property="og:description" content="Transformamos investimento em mídia em resultado real. +130 clientes. Atendimento direto, sem intermediários." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&q=80" />
+  <meta property="og:url" content="https://upagencia.com.br" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="UP Agência — Marketing Digital de Performance" />
+  <meta name="twitter:description" content="Transformamos investimento em mídia em resultado real." />
+
+  <!-- Favicon inline SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%2357999B'/%3E%3Ctext x='50' y='68' font-family='Montserrat,Arial,sans-serif' font-weight='900' font-size='52' text-anchor='middle' fill='white'%3EUP%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -777,7 +796,317 @@
       .services-header { flex-direction: column; align-items: flex-start; gap: 20px; }
       .cases-header { flex-direction: column; align-items: flex-start; gap: 20px; }
     }
-  </style>
+  
+  /* ── Transições suaves entre seções ── */
+  .section-divider {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+  }
+  .section-divider svg {
+    display: block;
+    width: 100%;
+    height: 60px;
+  }
+
+  /* ── WhatsApp flutuante ── */
+  #wa-float {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 9999;
+    width: 56px;
+    height: 56px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.45);
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  #wa-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 28px rgba(37,211,102,0.6);
+  }
+  #wa-float svg { width: 30px; height: 30px; fill: white; }
+  #wa-float-tooltip {
+    position: fixed;
+    bottom: 38px;
+    right: 92px;
+    z-index: 9998;
+    background: rgba(4,22,22,0.92);
+    color: var(--teal-light);
+    font-family: 'Montserrat',sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 8px 14px;
+    border-radius: 8px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+    border: 1px solid rgba(131,206,209,0.2);
+  }
+  #wa-float:hover + #wa-float-tooltip,
+  #wa-float-tooltip.show { opacity: 1; }
+  @media(max-width:600px){
+    #wa-float { bottom:16px; right:16px; width:50px; height:50px; }
+    #wa-float-tooltip { display:none; }
+  }
+
+  /* ── Certificações ── */
+  #certificacoes {
+    padding: 56px 0 48px;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    background: rgba(255,255,255,0.01);
+  }
+  .cert-eyebrow {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--teal-light);
+    margin-bottom: 10px;
+  }
+  .cert-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 8px;
+    opacity: 0.88;
+  }
+  .cert-sub {
+    font-size: 13px;
+    color: rgba(242,242,242,0.38);
+    margin-bottom: 40px;
+  }
+  .cert-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  .cert-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 16px;
+    padding: 22px 24px 18px;
+    width: 148px;
+    transition: border-color 0.25s, background 0.25s, transform 0.25s;
+    cursor: default;
+  }
+  .cert-card:hover {
+    border-color: rgba(131,206,209,0.28);
+    background: rgba(87,153,155,0.08);
+    transform: translateY(-3px);
+  }
+  .cert-logo-wrap {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cert-logo-wrap svg { width: 100%; height: 100%; }
+  .cert-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    color: rgba(242,242,242,0.65);
+    text-align: center;
+    letter-spacing: 0.02em;
+    line-height: 1.4;
+  }
+  .cert-badge {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--teal-light);
+    background: rgba(87,153,155,0.12);
+    border: 1px solid rgba(131,206,209,0.18);
+    border-radius: 20px;
+    padding: 3px 10px;
+  }
+  @media(max-width:600px){
+    .cert-card { width: 130px; padding: 16px 14px 14px; }
+    .cert-grid { gap: 12px; }
+  }
+
+  /* ── Formulário flutuante lateral ── */
+  #float-form-trigger {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9990;
+    background: linear-gradient(135deg, var(--teal), #83CED1);
+    color: #041010;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    padding: 18px 10px;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    box-shadow: 4px 0 24px rgba(87,153,155,0.35);
+    transition: padding 0.2s, box-shadow 0.2s;
+    user-select: none;
+  }
+  #float-form-trigger:hover {
+    padding: 18px 14px;
+    box-shadow: 6px 0 32px rgba(87,153,155,0.5);
+  }
+
+  #float-form-panel {
+    position: fixed;
+    left: -380px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9991;
+    width: 340px;
+    background: #071E20;
+    border: 1px solid rgba(131,206,209,0.18);
+    border-left: none;
+    border-radius: 0 20px 20px 0;
+    box-shadow: 8px 0 48px rgba(0,0,0,0.6);
+    padding: 32px 28px 28px;
+    transition: left 0.38s cubic-bezier(0.16,1,0.3,1);
+  }
+  #float-form-panel.open {
+    left: 0;
+  }
+  #float-form-panel .ffp-close {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    background: none;
+    border: none;
+    color: rgba(242,242,242,0.35);
+    font-size: 20px;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s;
+    font-family: sans-serif;
+  }
+  #float-form-panel .ffp-close:hover { color: var(--teal-light); }
+
+  .ffp-eyebrow {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--teal-light);
+    margin-bottom: 6px;
+  }
+  .ffp-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1.3;
+    margin-bottom: 4px;
+  }
+  .ffp-sub {
+    font-size: 12px;
+    color: rgba(242,242,242,0.38);
+    margin-bottom: 22px;
+    line-height: 1.5;
+  }
+  .ffp-field {
+    margin-bottom: 14px;
+  }
+  .ffp-field label {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(242,242,242,0.45);
+    margin-bottom: 6px;
+  }
+  .ffp-field input,
+  .ffp-field select {
+    width: 100%;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 11px 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    color: var(--white);
+    outline: none;
+    transition: border-color 0.2s, background 0.2s;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+  }
+  .ffp-field select option { background: #071E20; color: var(--white); }
+  .ffp-field input:focus,
+  .ffp-field select:focus {
+    border-color: rgba(131,206,209,0.45);
+    background: rgba(87,153,155,0.08);
+  }
+  .ffp-field input::placeholder { color: rgba(242,242,242,0.2); }
+
+  .ffp-submit {
+    width: 100%;
+    margin-top: 8px;
+    padding: 14px;
+    background: linear-gradient(135deg, var(--teal), #83CED1);
+    border: none;
+    border-radius: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    color: #041010;
+    cursor: pointer;
+    letter-spacing: 0.04em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+  .ffp-submit:hover { opacity: 0.9; transform: translateY(-1px); }
+  .ffp-submit:active { transform: translateY(0); }
+
+  #float-form-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9989;
+    background: rgba(0,0,0,0);
+  }
+  #float-form-overlay.open { display: block; }
+
+  @media(max-width: 600px){
+    #float-form-panel { width: calc(100vw - 40px); }
+    #float-form-trigger { font-size: 9px; padding: 14px 8px; }
+  }
+</style>
 </head>
 <body>
 
@@ -948,6 +1277,102 @@
       <span class="ticker-item"><span class="dot"></span>Estratégia Digital</span>
     </div>
   </div>
+
+
+  <!-- ─── CERTIFICAÇÕES ─── -->
+  <section id="certificacoes" class="reveal">
+    <div class="cert-eyebrow">Certificações & Credenciais</div>
+    <div class="cert-title">Conhecimento validado pelas maiores referências do mercado</div>
+    <div class="cert-sub">Formação técnica e institucional que sustenta cada estratégia</div>
+    <div class="cert-grid">
+
+      <!-- Google -->
+      <div class="cert-card">
+        <div class="cert-logo-wrap">
+          <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+            <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+            <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+            <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+            <path fill="none" d="M0 0h48v48H0z"/>
+          </svg>
+        </div>
+        <div class="cert-name">Google<br>Skillshop</div>
+        <div class="cert-badge">Certificado</div>
+      </div>
+
+      <!-- Meta -->
+      <div class="cert-card">
+        <div class="cert-logo-wrap">
+          <svg viewBox="0 0 80 28" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="metaG2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#0082FB"/>
+                <stop offset="100%" stop-color="#0ABCF9"/>
+              </linearGradient>
+            </defs>
+            <!-- Meta infinity loop symbol -->
+            <path fill="url(#metaG2)" d="M20 14c0-3.2-1.5-5.5-3.8-5.5-1.4 0-2.6.9-3.8 2.8C11.2 9.4 9.8 8.5 8.2 8.5 5.8 8.5 4 11 4 14.2c0 1.8.6 3.3 1.6 4.3.9.9 1.9 1.2 2.8 1.2 1.7 0 3-.9 4.4-2.9.9 1.3 1.6 2 2.3 2.4.6.4 1.3.5 2 .5 2.4 0 3.9-2.3 3.9-5.7zm-9.4.3c-.8 1.4-1.6 2.1-2.4 2.1-.5 0-1-.3-1.3-.8-.4-.6-.6-1.4-.6-2.5 0-2 .8-3.3 2-3.3.9 0 1.7.8 2.7 2.6l-.4 1.9zm6.1 2.1c-.9 0-1.8-.9-2.9-2.8l.3-1.4c.7-1.3 1.5-2 2.4-2 1.2 0 2 1.3 2 3.2 0 1.9-.7 3-1.8 3z"/>
+            <!-- Meta wordmark -->
+            <text x="24" y="18.5" font-family="Arial,sans-serif" font-weight="900" font-size="12" fill="url(#metaG2)" letter-spacing="0.5">meta</text>
+          </svg>
+        </div>
+        <div class="cert-name">Meta<br>Blueprint</div>
+        <div class="cert-badge">Certificado</div>
+      </div>
+
+      <!-- Rock Content -->
+      <div class="cert-card">
+        <div class="cert-logo-wrap">
+          <svg viewBox="0 0 90 36" xmlns="http://www.w3.org/2000/svg">
+            <!-- Rock Content wordmark style -->
+            <text x="0" y="24" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="15" fill="#FF4438" letter-spacing="-0.3">rock</text>
+            <text x="0" y="36" font-family="Arial,sans-serif" font-weight="400" font-size="11" fill="#888" letter-spacing="2">content</text>
+            <!-- decorative dot -->
+            <circle cx="83" cy="8" r="4" fill="#FF4438"/>
+          </svg>
+        </div>
+        <div class="cert-name">Rock Content<br>Academy</div>
+        <div class="cert-badge">Certificado</div>
+      </div>
+
+      <!-- Senac SP -->
+      <div class="cert-card">
+        <div class="cert-logo-wrap">
+          <svg viewBox="0 0 64 48" xmlns="http://www.w3.org/2000/svg">
+            <!-- Senac blue bar top -->
+            <rect width="64" height="6" fill="#003C8F"/>
+            <!-- S symbol -->
+            <text x="4" y="36" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="28" fill="#003C8F">S</text>
+            <!-- enac -->
+            <text x="22" y="28" font-family="Arial,sans-serif" font-weight="700" font-size="11" fill="#003C8F">enac</text>
+            <!-- São Paulo subtitle -->
+            <text x="22" y="40" font-family="Arial,sans-serif" font-weight="400" font-size="8.5" fill="#555" letter-spacing="0.5">São Paulo</text>
+          </svg>
+        </div>
+        <div class="cert-name">Senac<br>São Paulo</div>
+        <div class="cert-badge">Certificado</div>
+      </div>
+
+      <!-- Sebrae -->
+      <div class="cert-card">
+        <div class="cert-logo-wrap">
+          <svg viewBox="0 0 80 40" xmlns="http://www.w3.org/2000/svg">
+            <!-- Sebrae colored blocks -->
+            <rect x="0" y="8" width="10" height="10" fill="#009640"/>
+            <rect x="0" y="20" width="10" height="10" fill="#0070C0"/>
+            <rect x="11" y="8" width="10" height="10" fill="#0070C0"/>
+            <rect x="11" y="20" width="10" height="10" fill="#009640"/>
+            <!-- sebrae wordmark -->
+            <text x="25" y="24" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="15" fill="#0070C0" letter-spacing="-0.5">sebrae</text>
+          </svg>
+        </div>
+        <div class="cert-name">Sebrae<br>Nacional</div>
+        <div class="cert-badge">Certificado</div>
+      </div>
+
+    </div>
+  </section>
 
   <!-- ─── SERVIÇOS ─── -->
   <section id="servicos">
@@ -2224,6 +2649,9 @@
     window.switchSeg=function(key){
       currentSeg=key;
       document.querySelectorAll('.seg-tab').forEach(function(t){ t.classList.toggle('active',t.getAttribute('data-seg')===key); });
+      /* micro-fade */
+      var _panel=document.getElementById('seg-panel');
+      if(_panel){ _panel.style.transition='opacity 0.18s ease,transform 0.18s ease'; _panel.style.opacity='0'; _panel.style.transform='translateY(6px)'; setTimeout(function(){ if(_panel){ _panel.style.opacity='1'; _panel.style.transform='translateY(0)'; } },40); }
       sliderHintHidden=false;
       var h=document.getElementById('dragHint'), p=document.getElementById('thumbPulse');
       if(h) h.style.opacity='1';
@@ -3086,5 +3514,101 @@ E-mail: ' + email + '
     ctx.fillText(line, x, y);
   }
   </script>
+
+  <!-- WhatsApp Flutuante -->
+  <a id="wa-float" href="https://wa.me/5511999999999?text=Olá!%20Vim%20pelo%20site%20da%20UP%20Agência%20e%20quero%20saber%20mais." target="_blank" rel="noopener" aria-label="Fale conosco pelo WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+  <div id="wa-float-tooltip">Fale pelo WhatsApp</div>
+
+  <!-- ── Formulário Flutuante Lateral ── -->
+  <div id="float-form-overlay" onclick="closeFloatForm()"></div>
+
+  <div id="float-form-trigger" onclick="toggleFloatForm()" title="Fale conosco">
+    Fale&nbsp;Conosco
+  </div>
+
+  <div id="float-form-panel">
+    <button class="ffp-close" onclick="closeFloatForm()" aria-label="Fechar">✕</button>
+    <div class="ffp-eyebrow">Contato rápido</div>
+    <div class="ffp-title">Vamos conversar?</div>
+    <div class="ffp-sub">Preencha e te respondemos pelo WhatsApp em até 1h útil.</div>
+
+    <div class="ffp-field">
+      <label>Seu nome</label>
+      <input type="text" id="ffp-nome" placeholder="Ex: João Silva" />
+    </div>
+    <div class="ffp-field">
+      <label>Seu segmento</label>
+      <select id="ffp-segmento">
+        <option value="">Selecione seu segmento...</option>
+        <option>Clínica / Consultório</option>
+        <option>Escritório / Advocacia</option>
+        <option>Varejo / Loja física</option>
+        <option>E-commerce</option>
+        <option>Educação / Cursos</option>
+        <option>Beleza / Estética</option>
+        <option>Imóveis</option>
+        <option>Serviços Locais</option>
+        <option>Outro</option>
+      </select>
+    </div>
+    <div class="ffp-field">
+      <label>Maior desafio hoje</label>
+      <input type="text" id="ffp-desafio" placeholder="Ex: Preciso de mais clientes..." />
+    </div>
+
+    <button class="ffp-submit" onclick="enviarFormWpp()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+      Enviar pelo WhatsApp
+    </button>
+  </div>
+
+  <script>
+  function toggleFloatForm() {
+    var panel = document.getElementById('float-form-panel');
+    var overlay = document.getElementById('float-form-overlay');
+    var isOpen = panel.classList.contains('open');
+    if(isOpen) { closeFloatForm(); } else { openFloatForm(); }
+  }
+  function openFloatForm() {
+    document.getElementById('float-form-panel').classList.add('open');
+    document.getElementById('float-form-overlay').classList.add('open');
+    setTimeout(function(){ document.getElementById('ffp-nome').focus(); }, 380);
+  }
+  function closeFloatForm() {
+    document.getElementById('float-form-panel').classList.remove('open');
+    document.getElementById('float-form-overlay').classList.remove('open');
+  }
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeFloatForm();
+  });
+  function enviarFormWpp() {
+    var nome     = (document.getElementById('ffp-nome').value || '').trim();
+    var segmento = (document.getElementById('ffp-segmento').value || '').trim();
+    var desafio  = (document.getElementById('ffp-desafio').value || '').trim();
+    if(!nome) { document.getElementById('ffp-nome').focus(); return; }
+    if(!segmento) { document.getElementById('ffp-segmento').focus(); return; }
+    var msg = 'Olá! Vim pelo site da UP Agência 👋
+
+'
+            + '*Nome:* ' + nome + '
+'
+            + '*Segmento:* ' + segmento + '
+'
+            + (desafio ? '*Desafio:* ' + desafio + '
+' : '')
+            + '
+Gostaria de saber mais sobre como vocês podem me ajudar!';
+    var url = 'https://wa.me/5511999999999?text=' + encodeURIComponent(msg);
+    window.open(url, '_blank');
+    closeFloatForm();
+  }
+  </script>
+
 </body>
 </html>
